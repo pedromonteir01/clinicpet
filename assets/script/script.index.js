@@ -23,7 +23,13 @@ class ListPet {
 
     addPet(pet) {
     //verifications
-
+    if(isAnyInputEmpty()) {
+        return sendMsg('Preencha todos os campos', 'error');
+    } else if(isURLValida(this.img)){
+        return sendMsg("Imagem inválida", "error");
+    } else {
+        this.petArray.addPet(pet);
+    }
     }
 }
 

@@ -8,3 +8,8 @@
     display: none;
     visibility: hidden;
 }
+
+.error {
+    color: red;
+    text-transform: uppercase;
+}
