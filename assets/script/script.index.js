@@ -104,7 +104,11 @@ function showList() {
             <strong><p>Tutor:</p></strong> <span>${pet.tutor}</span>
         `
     });
-
     listDiv.innerHTML = listHTML;
+}
+
+function showPets() {
+    document.getElementById('main-field').classList.add('hidden');
+    document.getElementById('artc_list').classList.remove('hidden');
 }
 
