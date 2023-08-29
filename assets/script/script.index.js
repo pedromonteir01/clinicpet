@@ -11,7 +11,16 @@ class Pet {
 
     //get age
     getAge(birthdate) {
+        let today = new Date();
+        let birthdate_ = new Date(this.birthdate);
+        let age = today.getFullYear() - birthdate.getFullYear();
+        let month = today.getMonth() - birthdate.getMonth();
 
+        if (month < 0 || (month === 0 && today.getDate() < birthdate.getDate())) {
+            age--;
+        }
+
+        return age < 0 ? 0 : age;
     }
 }
 
