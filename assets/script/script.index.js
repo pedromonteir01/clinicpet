@@ -28,7 +28,8 @@ class ListPet {
     } else if(isURLValida(this.img)){
         return sendMsg("Imagem inválida", "error");
     } else {
-        this.petArray.addPet(pet);
+        this.petArray.push(pet);
+        cleandFields();
     }
     }
 }
@@ -79,3 +80,4 @@ function sendMsg(msg, type) {
 
     msgDiv.innerHTML = msgP;
 }
+
