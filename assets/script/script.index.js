@@ -30,6 +30,7 @@ class ListPet {
     } else {
         this.petArray.push(pet);
         cleandFields();
+        showList();
     }
     }
 }
@@ -79,5 +80,22 @@ function sendMsg(msg, type) {
     `
 
     msgDiv.innerHTML = msgP;
+}
+
+function showList() {
+    let listDiv = document.getElementById('pet-list');
+    let listHTML = '';
+
+    listPet.petArray.forEach(pet => {
+        listHTML += `
+            <img src="${pet.img}" alt="${pet.name}-photo">
+            <strong><p>Nome do pet:</p></strong> <span>${pet.name}</span>
+            <strong><p>Espécie:</p></strong> <span>${pet.specie}</span>
+            <strong><p>Idade:</p></strong> <span>${pet.age}</span>
+            <strong><p>Tutor:</p></strong> <span>${pet.tutor}</span>
+        `
+    });
+
+    listDiv.innerHTML = listHTML;
 }
 
