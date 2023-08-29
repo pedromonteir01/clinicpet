@@ -67,7 +67,7 @@ button:hover {
 footer {
     background-color: #1d7044;
     color: white;
-    position: fixed;
+    position: auto;
     width: 100%;
     font-size: xx-small;
     font-weight: lighter;
@@ -80,7 +80,8 @@ footer {
 /* post pets */
 
 #artc_list {
-    min-height: 75vh;
+    height: 520px;
+    overflow-y: auto;
 }
 
 #pet-list {
@@ -90,16 +91,32 @@ footer {
     align-content: center;
     justify-content: center;
     align-items: center;
+
 }
 
 .card-pet {
-    width: 33%;
+    width: auto;
     height: auto;
     border-style: solid;
     border-width: thin;
     border-radius: 5px;
     margin: 2rem;
+    padding: 20px;
 }
+
+.card-pet img {
+    max-width: 350px;
+    max-height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.format-card {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
 
 /* Estilos para JS */
 .hidden {
@@ -115,3 +132,4 @@ footer {
 .success {
     color: green;
 }
+

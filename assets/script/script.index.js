@@ -105,10 +105,16 @@ function showList() {
         listHTML += `
             <div class="card-pet">
             <img src="${pet.img}" alt="${pet.name}-photo">
-            <div id="format-card">
+            <div class="format-card">
             <strong><p>Nome do pet:</p></strong> <span>${pet.name}</span>
+            </div>
+            <div class="format-card">
             <strong><p>Espécie:</p></strong> <span>${pet.specie}</span>
+            </div>
+            <div class="format-card">
             <strong><p>Idade:</p></strong> <span>${pet.age}</span>
+            </div>
+            <div class="format-card">
             <strong><p>Tutor:</p></strong> <span>${pet.tutor}</span>
             </div>
             </div>
@@ -119,7 +125,7 @@ function showList() {
 
 function showPets() {
     if(listPet.petArray.length == 0) {
-        sendMsg('adicione um pet!', 'error')
+        sendMsg('adicione um pet!', 'error');
     } else {
         document.getElementById('main-field').classList.add('hidden');
         document.getElementById('artc_list').classList.remove('hidden');
