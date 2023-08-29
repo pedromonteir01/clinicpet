@@ -112,3 +112,8 @@ function showPets() {
     document.getElementById('artc_list').classList.remove('hidden');
 }
 
+function showRegister() {
+    document.getElementById('main-field').classList.remove('hidden');
+    document.getElementById('artc_list').classList.add('hidden');
+}
+
