@@ -40,3 +40,20 @@ function catchValue() {
 
     listPet.addPet(pet);
 }
+
+function isAnyInputEmpty() {
+    if (document.getElementById('tutor').value == "" || document.getElementById('pet-name').value == "" || document.getElementById('specie').value == "" || document.getElementById('img-pet').value == "" || document.getElementById('birthdate').value == "") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function cleandFields() {
+    document.getElementById('tutor').value = "";
+    document.getElementById('pet-name').value = "";
+    document.getElementById('specie').value = "";
+    document.getElementById('img-pet').value = "";
+    document.getElementById('birthdate').value = "";
+}
+
