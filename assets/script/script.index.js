@@ -57,3 +57,10 @@ function cleandFields() {
     document.getElementById('birthdate').value = "";
 }
 
+function isURLValida(url) {
+    if(url.match(/\.(jpeg|jpg|gif|png)$/) != null){
+        return true;
+    } else {
+        return false;
+    }
+}
