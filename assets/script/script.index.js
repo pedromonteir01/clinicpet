@@ -103,23 +103,33 @@ function showList() {
 
     listPet.petArray.forEach(pet => {
         listHTML += `
+            <div class="card-pet">
             <img src="${pet.img}" alt="${pet.name}-photo">
+            <div id="format-card">
             <strong><p>Nome do pet:</p></strong> <span>${pet.name}</span>
             <strong><p>Espécie:</p></strong> <span>${pet.specie}</span>
             <strong><p>Idade:</p></strong> <span>${pet.age}</span>
             <strong><p>Tutor:</p></strong> <span>${pet.tutor}</span>
-        `
+            </div>
+            </div>
+        `;
     });
     listDiv.innerHTML = listHTML;
 }
 
 function showPets() {
-    document.getElementById('main-field').classList.add('hidden');
-    document.getElementById('artc_list').classList.remove('hidden');
+    if(listPet.petArray.length == 0) {
+        sendMsg('adicione um pet!', 'error')
+    } else {
+        document.getElementById('main-field').classList.add('hidden');
+        document.getElementById('artc_list').classList.remove('hidden');
+        document.getElementById('text_h2').classList.add('hidden');
+    }
 }
 
 function showRegister() {
     document.getElementById('main-field').classList.remove('hidden');
     document.getElementById('artc_list').classList.add('hidden');
+    document.getElementById('text_h2').classList.remove('hidden');
 }
 
