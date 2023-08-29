@@ -64,3 +64,12 @@ function isURLValida(url) {
         return false;
     }
 }
+
+function sendMsg(msg, type) {
+    let msgDiv = document.getElementById('register');
+    const msgP = `
+        <p class="${type}">${msg}</p>
+    `
+
+    msgDiv.innerHTML = msgP;
+}
