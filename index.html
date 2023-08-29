@@ -8,6 +8,53 @@
     <title>Clinic Petshop</title>
 </head>
 <body>
-    
+    <!--Navegação-->
+    <header>
+        <h1>Clínica Veterinária</h1>
+        <div>
+            <button>Cadastro</button>
+            <button>Exibição</button>
+        </div>
+    </header>
+<main>
+    <!--Cadastro-->
+    <h2>Cadastro de Pets</h2>
+    <!--Formulário para cadastro dos pets-->
+    <article id="form-field">
+        <section class="input-field">
+            <label for="tutor">Tutor:</label>
+            <input type="text" id="tutor" name="tutor" placeholder="Digite o nome do tutor...">
+        </section>
+        <section class="input-field">
+            <label for="pet-name">Nome do pet:</label>
+            <input type="text" id="pet-name" name="pet-name" placeholder="Digite o nome do pet...">
+        </section>
+        <section class="input-field">
+            <label for="specie">Espécie</label>
+            <input type="text" id="specie" name="specie" placeholder="Digite a espécie...">
+        </section>
+        <section class="input-field">
+            <label for="img-pet">Foto do pet:</label>
+            <input type="text" id="img-pet" name="img-pet" placeholder="Coloque o link da foto...">
+        </section>
+        <section class="input-field">
+            <label for="birthdate-pet">Data de nascimento:</label>
+            <input type="date" id="birthdate" name="birthdate">
+        </section>
+
+        <!--Botão de cadastro-->
+        <section>
+            <button>Cadastrar</button>
+        </section>
+    </article>
+    <article class="hidden">
+        <section id="pet-list">
+
+        </section>
+    </article>
+    <footer id="footer_">
+        <h1>DIREITOS BLAKABAJAK</h1>
+    </footer>
+</main>
 </body>
 </html>
