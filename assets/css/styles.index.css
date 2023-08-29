@@ -13,3 +13,7 @@
     color: red;
     text-transform: uppercase;
 }
+
+.success {
+    color: green;
+}

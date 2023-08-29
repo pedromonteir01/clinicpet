@@ -13,10 +13,10 @@ class Pet {
     getAge(birthdate) {
         let today = new Date();
         let birthdate_ = new Date(this.birthdate);
-        let age = today.getFullYear() - birthdate.getFullYear();
-        let month = today.getMonth() - birthdate.getMonth();
+        let age = today.getFullYear() - birthdate_.getFullYear();
+        let month = today.getMonth() - birthdate_.getMonth();
 
-        if (month < 0 || (month === 0 && today.getDate() < birthdate.getDate())) {
+        if (month < 0 || (month === 0 && today.getDate() < birthdate_.getDate())) {
             age--;
         }
 
@@ -34,19 +34,20 @@ class ListPet {
     //verifications
     if(isAnyInputEmpty()) {
         return sendMsg('Preencha todos os campos', 'error');
-    } else if(isURLValida(this.img)){
+    } else if(!isURLValida(pet.img)){
         return sendMsg("Imagem inválida", "error");
     } else {
         this.petArray.push(pet);
         cleandFields();
         showList();
+        sendMsg('Sucesso! Pet cadastrado', 'success')
     }
     }
 }
 
 let listPet = new ListPet();
 
-function catchValue() {
+function catchValues() {
     let tutor = document.getElementById('tutor').value;
     let name = document.getElementById('pet-name').value;
     let specie = document.getElementById('specie').value;
@@ -83,12 +84,17 @@ function isURLValida(url) {
 }
 
 function sendMsg(msg, type) {
-    let msgDiv = document.getElementById('register');
+    document.getElementById('msg').classList.remove('hidden');
+    let msgDiv = document.getElementById('msg');
     const msgP = `
         <p class="${type}">${msg}</p>
     `
 
     msgDiv.innerHTML = msgP;
+
+    setTimeout(function () {
+        document.getElementById('msg').classList.add('hidden');
+    }, 3000);
 }
 
 function showList() {
